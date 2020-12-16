@@ -540,7 +540,7 @@ if (typeof browser === "undefined" || Object.getPrototypeOf(browser) !== Object.
     return wrapObject(extensionAPIs, staticWrappers, apiMetadata);
   };
 
-  if (typeof chrome != "object" || !chrome || !chrome.runtime || !chrome.runtime.id) {
+  if (typeof chrome != "object" || !chrome || !chrome.runtime) {
     throw new Error("This script should only be loaded in a browser extension.");
   }
 
